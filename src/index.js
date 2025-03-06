@@ -1,5 +1,3 @@
-import "./styles/globals.css";
-
 import { XenConnectProvider, useXenConnect } from "./components/XenConnectProvider.js";
 import WalletButton from "./components/WalletButton.js";
 import WalletModal from "./components/WalletModal.js";

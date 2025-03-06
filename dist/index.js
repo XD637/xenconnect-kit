@@ -33,7 +33,6 @@ Object.defineProperty(exports, "useXenConnect", {
     return _XenConnectProvider.useXenConnect;
   }
 });
-require("./styles/globals.css");
 var _XenConnectProvider = require("./components/XenConnectProvider.js");
 var _WalletButton = _interopRequireDefault(require("./components/WalletButton.js"));
 var _WalletModal = _interopRequireDefault(require("./components/WalletModal.js"));
