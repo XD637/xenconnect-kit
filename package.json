@@ -1,6 +1,6 @@
 {
   "name": "xenconnect",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A customizable wallet connection library for Next.js",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -31,12 +31,11 @@
     "tailwindcss": "^4.0.10"
   },
   "files": [
-  "dist",
-  "dist/components",
-  "dist/styles",
-  "dist/assets"
-],
-
+    "dist",
+    "dist/components",
+    "dist/styles",
+    "dist/assets"
+  ],
   "keywords": [
     "wallet-connect",
     "crypto",
