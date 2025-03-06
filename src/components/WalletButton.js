@@ -1,4 +1,4 @@
-
+import React from "react";
 import { useState, useEffect } from "react";
 import { useAccount } from "wagmi";
 import WalletModal from "./WalletModal";

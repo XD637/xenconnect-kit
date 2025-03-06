@@ -1,5 +1,5 @@
+import React from "react";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { useConnect, useAccount } from "wagmi";
 import { injected, walletConnect, coinbaseWallet } from "wagmi/connectors";
 import { useXenConnect } from "./XenConnectProvider"; // Import the context
@@ -56,7 +56,7 @@ const WalletModal = ({ isOpen, onClose }) => {
               disabled={isLoading}
             >
               <div className="flex items-center">
-                <Image src={logo} alt={name} width={24} height={24} className="mr-3" />
+                <img src={logo} alt={name} width={24} height={24} className="mr-3" />
                 <span>{name}</span>
               </div>
             </button>

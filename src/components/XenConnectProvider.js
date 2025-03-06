@@ -1,4 +1,4 @@
-
+import React from "react";
 import { createContext, useContext } from "react";
 import { WagmiProvider, createConfig } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

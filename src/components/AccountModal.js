@@ -1,4 +1,4 @@
-
+import React from "react";
 import { useState } from "react";
 import { useAccount, useDisconnect, useBalance, useChainId } from "wagmi";
 import { Copy, Check, LogOut, Wallet, Link, Database } from "lucide-react"; // Icons
