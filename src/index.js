@@ -1,9 +1,9 @@
 import "./styles/globals.css";
 
-import { XenConnectProvider, useXenConnect } from "./components/XenConnectProvider";
-import WalletButton from "./components/WalletButton";
-import WalletModal from "./components/WalletModal";
-import AccountModal from "./components/AccountModal";
+import { XenConnectProvider, useXenConnect } from "./components/XenConnectProvider.js";
+import WalletButton from "./components/WalletButton.js";
+import WalletModal from "./components/WalletModal.js";
+import AccountModal from "./components/AccountModal.js";
 
 export {
   XenConnectProvider,

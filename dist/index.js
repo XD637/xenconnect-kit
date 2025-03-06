@@ -34,8 +34,8 @@ Object.defineProperty(exports, "useXenConnect", {
   }
 });
 require("./styles/globals.css");
-var _XenConnectProvider = require("./components/XenConnectProvider");
-var _WalletButton = _interopRequireDefault(require("./components/WalletButton"));
-var _WalletModal = _interopRequireDefault(require("./components/WalletModal"));
-var _AccountModal = _interopRequireDefault(require("./components/AccountModal"));
+var _XenConnectProvider = require("./components/XenConnectProvider.js");
+var _WalletButton = _interopRequireDefault(require("./components/WalletButton.js"));
+var _WalletModal = _interopRequireDefault(require("./components/WalletModal.js"));
+var _AccountModal = _interopRequireDefault(require("./components/AccountModal.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
