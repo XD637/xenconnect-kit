@@ -40,19 +40,19 @@ var WalletModal = function WalletModal(_ref) {
   var wallets = [{
     name: "MetaMask",
     connector: (0, _connectors.injected)(),
-    logo: "/src/assets/metamask-logo.svg"
+    logo: "../assets/metamask-logo.svg"
   }, {
     name: "WalletConnect",
     connector: (0, _connectors.walletConnect)({
       projectId: projectId
     }),
-    logo: "/src/assets/walletconnect-logo.svg"
+    logo: "../assets/walletconnect-logo.svg"
   }, {
     name: "Coinbase Wallet",
     connector: (0, _connectors.coinbaseWallet)({
       appName: appName
     }),
-    logo: "/src/assets/coinbase-logo.svg"
+    logo: "../assets/coinbase-logo.svg"
   }];
   (0, _react.useEffect)(function () {
     if (isConnected) onClose();
