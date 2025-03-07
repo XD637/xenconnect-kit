@@ -40,19 +40,19 @@ var WalletModal = function WalletModal(_ref) {
   var wallets = [{
     name: "MetaMask",
     connector: (0, _connectors.injected)(),
-    logo: "dist/assets/metamask-logo.svg"
+    logo: "assets/metamask-logo.svg"
   }, {
     name: "WalletConnect",
     connector: (0, _connectors.walletConnect)({
       projectId: projectId
     }),
-    logo: "dist/assets/walletconnect-logo.svg"
+    logo: "assets/walletconnect-logo.svg"
   }, {
     name: "Coinbase Wallet",
     connector: (0, _connectors.coinbaseWallet)({
       appName: appName
     }),
-    logo: "dist/assets/coinbase-logo.svg"
+    logo: "assets/coinbase-logo.svg"
   }];
   (0, _react.useEffect)(function () {
     if (isConnected) onClose();
@@ -91,7 +91,7 @@ var WalletModal = function WalletModal(_ref) {
     };
   }();
   return /*#__PURE__*/_react["default"].createElement("div", {
-    className: "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+    className: "fixed inset-0 flex items-center justify-center z-50"
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "relative bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-xs w-full"
   }, /*#__PURE__*/_react["default"].createElement("button", {

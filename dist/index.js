@@ -33,7 +33,7 @@ Object.defineProperty(exports, "useXenConnect", {
     return _XenConnectProvider.useXenConnect;
   }
 });
-require("../dist/tailwind.css");
+require("./tailwind.css");
 var _react = _interopRequireDefault(require("react"));
 var _XenConnectProvider = require("./components/XenConnectProvider.js");
 var _WalletButton = _interopRequireDefault(require("./components/WalletButton.js"));

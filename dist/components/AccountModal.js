@@ -22,8 +22,7 @@ var AccountModal = function AccountModal(_ref) {
   var isOpen = _ref.isOpen,
     onClose = _ref.onClose;
   var _useAccount = (0, _wagmi.useAccount)(),
-    address = _useAccount.address,
-    connector = _useAccount.connector;
+    address = _useAccount.address;
   var _useDisconnect = (0, _wagmi.useDisconnect)(),
     disconnect = _useDisconnect.disconnect;
   var _useBalance = (0, _wagmi.useBalance)({
@@ -53,7 +52,7 @@ var AccountModal = function AccountModal(_ref) {
     }, 3000); // Hide after 3 seconds
   };
   return /*#__PURE__*/_react["default"].createElement("div", {
-    className: "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+    className: "fixed inset-0 flex items-center justify-center z-50"
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "relative bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-sm w-full"
   }, /*#__PURE__*/_react["default"].createElement("button", {
@@ -71,11 +70,7 @@ var AccountModal = function AccountModal(_ref) {
     className: "text-gray-600 dark:text-gray-400 text-sm flex items-center justify-center gap-2"
   }, /*#__PURE__*/_react["default"].createElement(_lucideReact.Link, {
     size: 18
-  }), " Connected to ", connector === null || connector === void 0 ? void 0 : connector.name), /*#__PURE__*/_react["default"].createElement("p", {
-    className: "text-gray-600 dark:text-gray-400 text-sm flex items-center justify-center gap-2"
-  }, /*#__PURE__*/_react["default"].createElement(_lucideReact.Database, {
-    size: 18
-  }), " Chain: ", chainName), /*#__PURE__*/_react["default"].createElement("p", {
+  }), "Chain: ", chainName), /*#__PURE__*/_react["default"].createElement("p", {
     className: "text-gray-900 dark:text-white font-bold mt-2 flex items-center justify-center gap-2"
   }, balance ? "".concat(parseFloat(balance.formatted).toFixed(4), " ").concat(balance.symbol) : "Loading balance..."), /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex justify-center mt-2"

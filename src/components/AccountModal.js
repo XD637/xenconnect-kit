@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { useAccount, useDisconnect, useBalance, useChainId } from "wagmi";
-import { Copy, Check, LogOut, Wallet, Link, Database } from "lucide-react"; // Icons
+import { Copy, Check, LogOut, Wallet, Link } from "lucide-react"; // Icons
 
 const AccountModal = ({ isOpen, onClose }) => {
-  const { address, connector } = useAccount();
+  const { address} = useAccount();
   const { disconnect } = useDisconnect();
   const { data: balance } = useBalance({ address });
   const chainId = useChainId(); // Get chain ID instead of useNetwork()
@@ -30,7 +30,7 @@ const AccountModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div className="fixed inset-0 flex items-center justify-center z-50">
       <div className="relative bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-sm w-full">
         {/* Close Button */}
         <button
@@ -50,14 +50,9 @@ const AccountModal = ({ isOpen, onClose }) => {
             <Wallet size={18} /> {address.slice(0, 6)}...{address.slice(-4)}
           </p>
 
-          {/* Connected Wallet Name */}
-          <p className="text-gray-600 dark:text-gray-400 text-sm flex items-center justify-center gap-2">
-            <Link size={18} /> Connected to {connector?.name}
-          </p>
-
           {/* Chain Name */}
           <p className="text-gray-600 dark:text-gray-400 text-sm flex items-center justify-center gap-2">
-            <Database size={18} /> Chain: {chainName}
+          <Link size={18} />Chain: {chainName}
           </p>
 
           {/* Balance (Correctly Formatted) */}

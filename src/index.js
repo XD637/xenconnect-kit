@@ -1,4 +1,4 @@
-import "../dist/tailwind.css"; // Import the precompiled Tailwind CSS
+import "./tailwind.css"; // Import the precompiled Tailwind CSS
 
 import React from "react";
 import { XenConnectProvider, useXenConnect } from "./components/XenConnectProvider.js";
