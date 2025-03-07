@@ -3,6 +3,7 @@
   "version": "1.1.5",
   "description": "A customizable wallet connection library for Next.js",
   "main": "dist/index.js",
+  "style": "dist/tailwind.css",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -37,7 +38,8 @@
   "files": [
     "dist",
     "dist/components",
-    "dist/assets"
+    "dist/assets",
+    "dist/tailwind.css"
   ],
   "keywords": [
     "wallet-connect",
