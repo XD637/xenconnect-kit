@@ -37,22 +37,26 @@ var WalletModal = function WalletModal(_ref) {
     _useState2 = _slicedToArray(_useState, 2),
     connectingWallet = _useState2[0],
     setConnectingWallet = _useState2[1];
+
+  // Get package name for CDN
+  var packageName = "xenconnect"; // Make sure this matches your NPM package name
+  var cdnBase = "https://cdn.jsdelivr.net/npm/".concat(packageName, "/dist/assets");
   var wallets = [{
     name: "MetaMask",
     connector: (0, _connectors.injected)(),
-    logo: "../assets/metamask-logo.svg"
+    logo: "".concat(cdnBase, "/metamask-logo.svg")
   }, {
     name: "WalletConnect",
     connector: (0, _connectors.walletConnect)({
       projectId: projectId
     }),
-    logo: "../assets/walletconnect-logo.svg"
+    logo: "".concat(cdnBase, "/walletconnect-logo.svg")
   }, {
     name: "Coinbase Wallet",
     connector: (0, _connectors.coinbaseWallet)({
       appName: appName
     }),
-    logo: "../assets/coinbase-logo.svg"
+    logo: "".concat(cdnBase, "/coinbase-logo.svg")
   }];
   (0, _react.useEffect)(function () {
     if (isConnected) onClose();

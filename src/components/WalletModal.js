@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useConnect, useAccount } from "wagmi";
 import { injected, walletConnect, coinbaseWallet } from "wagmi/connectors";
 import { useXenConnect } from "./XenConnectProvider"; // Import the context
@@ -10,10 +9,14 @@ const WalletModal = ({ isOpen, onClose }) => {
   const { isConnected } = useAccount();
   const [connectingWallet, setConnectingWallet] = useState(null);
 
+  // Get package name for CDN
+  const packageName = "xenconnect"; // Make sure this matches your NPM package name
+  const cdnBase = `https://cdn.jsdelivr.net/npm/${packageName}/dist/assets`;
+
   const wallets = [
-    { name: "MetaMask", connector: injected(), logo: "../assets/metamask-logo.svg" },
-    { name: "WalletConnect", connector: walletConnect({ projectId }), logo: "../assets/walletconnect-logo.svg" },
-    { name: "Coinbase Wallet", connector: coinbaseWallet({ appName }), logo: "../assets/coinbase-logo.svg" },
+    { name: "MetaMask", connector: injected(), logo: `${cdnBase}/metamask-logo.svg` },
+    { name: "WalletConnect", connector: walletConnect({ projectId }), logo: `${cdnBase}/walletconnect-logo.svg` },
+    { name: "Coinbase Wallet", connector: coinbaseWallet({ appName }), logo: `${cdnBase}/coinbase-logo.svg` },
   ];
 
   useEffect(() => {
