@@ -33,20 +33,17 @@ Object.defineProperty(exports, "useXenConnect", {
     return _XenConnectProvider.useXenConnect;
   }
 });
-require("./tailwind.css");
 var _react = _interopRequireDefault(require("react"));
 var _XenConnectProvider = require("./components/XenConnectProvider.js");
 var _WalletButton = _interopRequireDefault(require("./components/WalletButton.js"));
 var _WalletModal = _interopRequireDefault(require("./components/WalletModal.js"));
 var _AccountModal = _interopRequireDefault(require("./components/AccountModal.js"));
-var _tailwind2 = _interopRequireDefault(require("./tailwind.js"));
+var _tailwind = _interopRequireDefault(require("./tailwind.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
-// Import the precompiled Tailwind CSS
-
 // Dynamically inject Tailwind styles if in a browser environment
 
 if (typeof document !== "undefined") {
   var styleTag = document.createElement("style");
-  styleTag.innerHTML = _tailwind2["default"];
+  styleTag.innerHTML = _tailwind["default"];
   document.head.appendChild(styleTag);
 }
