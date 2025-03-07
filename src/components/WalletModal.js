@@ -11,9 +11,9 @@ const WalletModal = ({ isOpen, onClose }) => {
   const [connectingWallet, setConnectingWallet] = useState(null);
 
   const wallets = [
-    { name: "MetaMask", connector: injected(), logo: "../assets/metamask-logo.svg" },
-    { name: "WalletConnect", connector: walletConnect({ projectId }), logo: "../assets/walletconnect-logo.svg" },
-    { name: "Coinbase Wallet", connector: coinbaseWallet({ appName }), logo: "../assets/coinbase-logo.svg" },
+    { name: "MetaMask", connector: injected(), logo: "dist/assets/metamask-logo.svg" },
+    { name: "WalletConnect", connector: walletConnect({ projectId }), logo: "dist/assets/walletconnect-logo.svg" },
+    { name: "Coinbase Wallet", connector: coinbaseWallet({ appName }), logo: "dist/assets/coinbase-logo.svg" },
   ];
 
   useEffect(() => {

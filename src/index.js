@@ -1,3 +1,5 @@
+import "../dist/tailwind.css"; // Import the precompiled Tailwind CSS
+
 import React from "react";
 import { XenConnectProvider, useXenConnect } from "./components/XenConnectProvider.js";
 import WalletButton from "./components/WalletButton.js";
