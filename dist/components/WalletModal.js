@@ -43,7 +43,7 @@ var WalletModal = function WalletModal(_ref) {
   var cdnBase = "https://cdn.jsdelivr.net/npm/".concat(packageName, "/dist/assets");
   var wallets = [{
     name: "MetaMask",
-    connector: metaMask(),
+    connector: (0, _connectors.metaMask)(),
     logo: "".concat(cdnBase, "/metamask-logo.svg")
   }, {
     name: "WalletConnect",
