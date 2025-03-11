@@ -22,7 +22,7 @@ var WalletButton = function WalletButton(_ref) {
   var _ref$label = _ref.label,
     label = _ref$label === void 0 ? "Connect Wallet" : _ref$label,
     _ref$style = _ref.style,
-    style = _ref$style === void 0 ? "px-4 py-2 rounded-lg bg-black text-white hover:bg-gray-900 transition" : _ref$style;
+    style = _ref$style === void 0 ? "px-4 py-2 rounded-lg bg-black text-white font-semibold hover:bg-gray-900 transition shadow-md hover:shadow-lg active:shadow-sm active:translate-y-[1px]" : _ref$style;
   var _useAccount = (0, _wagmi.useAccount)(),
     address = _useAccount.address,
     isConnected = _useAccount.isConnected;

@@ -67,7 +67,7 @@ const WalletModal = ({ isOpen, onClose }) => {
         </div>
 
         <p className="text-center text-gray-500 dark:text-gray-400 text-xs mt-4">
-          Powered by XenConnect
+          Powered by Xennium
         </p>
       </div>
     </div>

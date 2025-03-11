@@ -127,6 +127,6 @@ var WalletModal = function WalletModal(_ref) {
     }), /*#__PURE__*/_react["default"].createElement("span", null, name)));
   })), /*#__PURE__*/_react["default"].createElement("p", {
     className: "text-center text-gray-500 dark:text-gray-400 text-xs mt-4"
-  }, "Powered by XenConnect")));
+  }, "Powered by Xennium")));
 };
 var _default = exports["default"] = WalletModal;
