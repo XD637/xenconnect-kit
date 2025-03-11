@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useConnect, useAccount } from "wagmi";
-import { injected, walletConnect, coinbaseWallet } from "wagmi/connectors";
+import { injected, walletConnect, coinbaseWallet, metaMask } from "wagmi/connectors";
 import { useXenConnect } from "./XenConnectProvider"; // Import the context
 
 const WalletModal = ({ isOpen, onClose }) => {
