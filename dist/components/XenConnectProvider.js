@@ -34,13 +34,16 @@ var XenConnectProvider = exports.XenConnectProvider = function XenConnectProvide
     appName = _ref.appName;
   var wagmiConfig = (0, _wagmi.createConfig)({
     autoConnect: true,
-    connectors: [(0, _connectors.injected)(), (0, _connectors.walletConnect)({
+    connectors: [(0, _connectors.injected)(),
+    // Standard Injected Wallets
+    (0, _connectors.metaMask)(), (0, _connectors.walletConnect)({
       projectId: projectId
     }), (0, _connectors.coinbaseWallet)({
       appName: appName
     })],
-    chains: [_chains.mainnet],
-    transports: _defineProperty({}, _chains.mainnet.id, (0, _viem.http)())
+    chains: [_chains.mainnet, _chains.polygon, _chains.arbitrum, _chains.optimism, _chains.base, _chains.avalanche, _chains.bsc],
+    // Added more chains
+    transports: _defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({}, _chains.mainnet.id, (0, _viem.http)()), _chains.polygon.id, (0, _viem.http)()), _chains.arbitrum.id, (0, _viem.http)()), _chains.optimism.id, (0, _viem.http)()), _chains.base.id, (0, _viem.http)()), _chains.avalanche.id, (0, _viem.http)()), _chains.bsc.id, (0, _viem.http)())
   });
   return /*#__PURE__*/_react["default"].createElement(XenConnectContext.Provider, {
     value: {

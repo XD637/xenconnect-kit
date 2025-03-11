@@ -43,7 +43,7 @@ var WalletModal = function WalletModal(_ref) {
   var cdnBase = "https://cdn.jsdelivr.net/npm/".concat(packageName, "/dist/assets");
   var wallets = [{
     name: "MetaMask",
-    connector: (0, _connectors.injected)(),
+    connector: metaMask(),
     logo: "".concat(cdnBase, "/metamask-logo.svg")
   }, {
     name: "WalletConnect",
@@ -57,6 +57,10 @@ var WalletModal = function WalletModal(_ref) {
       appName: appName
     }),
     logo: "".concat(cdnBase, "/coinbase-logo.svg")
+  }, {
+    name: "Injected",
+    connector: (0, _connectors.injected)(),
+    logo: "".concat(cdnBase, "/polygon.svg")
   }];
   (0, _react.useEffect)(function () {
     if (isConnected) onClose();

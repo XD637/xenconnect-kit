@@ -14,9 +14,10 @@ const WalletModal = ({ isOpen, onClose }) => {
   const cdnBase = `https://cdn.jsdelivr.net/npm/${packageName}/dist/assets`;
 
   const wallets = [
-    { name: "MetaMask", connector: injected(), logo: `${cdnBase}/metamask-logo.svg` },
+    { name: "MetaMask", connector: metaMask(), logo: `${cdnBase}/metamask-logo.svg` },
     { name: "WalletConnect", connector: walletConnect({ projectId }), logo: `${cdnBase}/walletconnect-logo.svg` },
     { name: "Coinbase Wallet", connector: coinbaseWallet({ appName }), logo: `${cdnBase}/coinbase-logo.svg` },
+    { name: "Injected", connector: injected(), logo: `${cdnBase}/polygon.svg` },
   ];
 
   useEffect(() => {

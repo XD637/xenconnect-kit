@@ -1,9 +1,18 @@
 import React from "react";
+
 import { createContext, useContext } from "react";
 import { WagmiProvider, createConfig } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { mainnet } from "wagmi/chains";
-import { injected, walletConnect, coinbaseWallet } from "wagmi/connectors";
+import {
+  mainnet,
+  polygon,
+  arbitrum,
+  optimism,
+  base,
+  avalanche,
+  bsc,
+} from "wagmi/chains";
+import { injected, metaMask, walletConnect, coinbaseWallet } from "wagmi/connectors";
 import { http } from "viem";
 
 // Create a context to store XenConnect configuration
@@ -24,13 +33,20 @@ export const XenConnectProvider = ({ children, projectId, appName }) => {
   const wagmiConfig = createConfig({
     autoConnect: true,
     connectors: [
-      injected(),
+      injected(), // Standard Injected Wallets
+      metaMask(),
       walletConnect({ projectId }),
       coinbaseWallet({ appName }),
     ],
-    chains: [mainnet],
+    chains: [mainnet, polygon, arbitrum, optimism, base, avalanche, bsc], // Added more chains
     transports: {
       [mainnet.id]: http(),
+      [polygon.id]: http(),
+      [arbitrum.id]: http(),
+      [optimism.id]: http(),
+      [base.id]: http(),
+      [avalanche.id]: http(),
+      [bsc.id]: http(),
     },
   });
 
